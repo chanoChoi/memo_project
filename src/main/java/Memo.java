@@ -24,9 +24,6 @@ public class Memo {
 
     } // 생성자 끝
 
-    void toString(){
-
-    }
 
     // Memo 객체의 내용값을 뱉어주는 함수들
     public int getNumber(){

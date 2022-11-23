@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="(조운) 1차 합본입니다. &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Memo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Memo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MemoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MemoList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,5 +74,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/Memo.java</url>
+          <line>5</line>
+          <properties field="writer" class="Memo" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
