@@ -2,18 +2,10 @@ import java.util.ArrayList;
 
 public class MemoList {
     ArrayList<Memo> memoList = new ArrayList(); // 메모리스트 입니다.
-    //테스트존
-//    static void testinput(){
-//        Memo testmemo1 = new Memo("테스트1","1234","이게맞나 으앙");
-//        Memo testmemo2 = new Memo("테스트2","1234","졸려요");
-//        Memo testmemo3 = new Memo("테스트3","1234","만든거 테스트 하기도 힘듬");
-//
-//        memoList.add(testmemo1);
-//        memoList.add(testmemo2);
-//        memoList.add(testmemo3);
-//    }
 
-    void inputMemo(){}//메모입력함수
+    void inputMemo(){
+        System.out.println("안녕하세요? 저는 inputMemo 메소드입니다");
+    }//메모입력함수
 
     //메모찾기함수 (-1 이면 해당메모 없음)
     int searchMemo(String searchText){

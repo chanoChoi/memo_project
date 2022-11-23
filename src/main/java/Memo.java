@@ -9,7 +9,7 @@ public class Memo {
     String contents; //메모내용
 
 
-    Memo(String writer, String password, String contents){
+    Memo(String writer, String password, String contents){ // (작성자명, 비밀번호, 메모내용)
         //생성자에서 바로 받는 인자(writer,password,contents)
         this.writer = writer;
         this.password =password;
