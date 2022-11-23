@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="Memo 클래스에&#10;- 생성자, get구성요소 메소드들 만들었습니다.&#10;(조운)">
+    <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="(조운)&#10;MemoList에 &#10;- searchMemo(String searchText){}&#10;메소드에서 인덱스를 찾고, 뱉어내는 식은 짰는데,&#10;(잘되나 구동테스트 + 일치하지 않는경우 어떻게 처리할지_일단오류텍스트가 뜨긴 합니다) 가 필요합니다. &#10;&#10;Memo 클래스에&#10;- 생성자, getter 메소드들 만들었습니다. &#10;&#10;Main 클래스&#10;- 대화창(프론트)? 만들었습니다.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Memo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Memo.java" afterDir="false" />
@@ -36,10 +36,11 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="njBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,7 +60,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager">
@@ -84,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669164633615</updated>
-      <workItem from="1669164637434" duration="17888000" />
+      <workItem from="1669164637434" duration="28729000" />
     </task>
     <task id="LOCAL-00001" summary="두번째 커밋.&#10;내용 업데이트가 안되있어서 베이스 다시 커밋합니다!">
       <created>1669169991851</created>
@@ -107,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669179806173</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="(조운)&#10;MemoList에 &#10;- searchMemo(String searchText){}&#10;메소드에서 인덱스를 찾고, 뱉어내는 식은 짰는데,&#10;(잘되나 구동테스트 + 일치하지 않는경우 어떻게 처리할지_일단오류텍스트가 뜨긴 합니다) 가 필요합니다. &#10;&#10;Memo 클래스에&#10;- 생성자, getter 메소드들 만들었습니다. &#10;&#10;Main 클래스&#10;- 대화창(프론트)? 만들었습니다.">
+      <created>1669186323630</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669186323630</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +137,7 @@
     <MESSAGE value="두번째 커밋.&#10;내용 업데이트가 안되있어서 베이스 다시 커밋합니다!" />
     <MESSAGE value="조운_테스트입니다!무시해주세여!" />
     <MESSAGE value="Memo 클래스에&#10;- 생성자, get구성요소 메소드들 만들었습니다.&#10;(조운)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Memo 클래스에&#10;- 생성자, get구성요소 메소드들 만들었습니다.&#10;(조운)" />
+    <MESSAGE value="(조운)&#10;MemoList에 &#10;- searchMemo(String searchText){}&#10;메소드에서 인덱스를 찾고, 뱉어내는 식은 짰는데,&#10;(잘되나 구동테스트 + 일치하지 않는경우 어떻게 처리할지_일단오류텍스트가 뜨긴 합니다) 가 필요합니다. &#10;&#10;Memo 클래스에&#10;- 생성자, getter 메소드들 만들었습니다. &#10;&#10;Main 클래스&#10;- 대화창(프론트)? 만들었습니다." />
+    <option name="LAST_COMMIT_MESSAGE" value="(조운)&#10;MemoList에 &#10;- searchMemo(String searchText){}&#10;메소드에서 인덱스를 찾고, 뱉어내는 식은 짰는데,&#10;(잘되나 구동테스트 + 일치하지 않는경우 어떻게 처리할지_일단오류텍스트가 뜨긴 합니다) 가 필요합니다. &#10;&#10;Memo 클래스에&#10;- 생성자, getter 메소드들 만들었습니다. &#10;&#10;Main 클래스&#10;- 대화창(프론트)? 만들었습니다." />
   </component>
 </project>

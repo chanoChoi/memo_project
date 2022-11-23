@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Memo {
-    int number; // 메모글번호
+    int index; // 메모글번호
     String writer; //메모작성자명
     String password; //메모비번
     String date; //메모작성일(시스템날짜)
@@ -20,12 +20,12 @@ public class Memo {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yy/MM/dd HH:mm");
         this.date = time.format(formatter);
 
-        this.number = 0; // 리스트에서 n번째여야함. >> 얘를 메모리스트에서 넣어줄 수 있나..?
+        this.index = 0; // 리스트에서 n번째여야함. >> 얘를 메모리스트에서 넣어줄 수 있나..?
 
     } // 생성자 끝
     // Memo 객체의 내용값을 뱉어주는 함수들
     public int getNumber(){
-        return this.number;
+        return this.index;
     }//getNumber 끝
 
     public String getWriter(){
