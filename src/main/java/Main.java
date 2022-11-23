@@ -8,7 +8,8 @@ public static void main(String[] args){
     String nameInput = nameScanner.next();
     System.out.println(nameInput);
 
-
+    // alskdalsjdnas,mnd,asmnd ,amsnd,amsndas,mdna,smdna,smnd
+    System.out.println("올립니다.");
 }
 
 
