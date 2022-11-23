@@ -1,0 +1,136 @@
+Index: src/main/java/MemoList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/MemoList.java b/src/main/java/MemoList.java
+--- a/src/main/java/MemoList.java	
++++ b/src/main/java/MemoList.java	
+@@ -10,12 +10,51 @@
+     }
+ 
+     //메모를 메모리스트에 입력하는 함수
+-    void inputMemo(Memo memo) {
+-        memo.index = memoList.size()+1; // 문제점 : memolist에서 메모 삭제하면, number가 안맞게된다. >> 해결책 : 어레이 리스트 자체의 인덱스를 쓸수 있나?
++    void inputMemo() {
++        System.out.println("메모를 입력합니다.");
++        System.out.println("남기고 싶은 내용을 입력해주세요.");
++        Scanner memoContentScanner = new Scanner(System.in);
++        String memoContentAnswer = memoContentScanner.nextLine();
++        //memoContentAnswer 받은 내용을 memo.contents로 넣습니다.
++
++        System.out.println("작성자명을 입력해주세요.");
++        Scanner memoWriterScanner = new Scanner(System.in);
++        String memoWriterAnswer = memoWriterScanner.nextLine();
++        //memoWriterAnswer 받은 내용을 memo.writer로 넣습니다.
++
++        System.out.println("비밀번호를 입력해주세요.");
++        Scanner memoPasswordScanner = new Scanner(System.in);
++        String memoPasswordAnswer = memoPasswordScanner.nextLine();
++        //memoPasswordAnswer 받은 내용을 memo.password 로 넣습니다.
++
++        Memo memo = new Memo(memoWriterAnswer, memoPasswordAnswer, memoContentAnswer); // Memo 객체 생성
++        System.out.println("메모 입력이 완로되었습니다.");
++
++        System.out.println("------------------------");
++        System.out.println("작성자 :" + memo.writer);
++        System.out.println("작성일시 :" + memo.date);
++        System.out.println("내용 :" + memo.contents);
++        System.out.println("------------------------");
++
+         memoList.add(memo);
++
++//            memoList.inputMemo(memo);
++////        firstQuestion(); >> 여기는 for문으로 바꿔야 함. 무한반복 안돼
++//
++
++
++//    memo.index =memoList.size()+1; // 문제점 : memolist에서 메모 삭제하면, number가 안맞게된다. >> 해결책 : 어레이 리스트 자체의 인덱스를 쓸수 있나?
++//        memoList.add(memo);
++
+     }
++
++
++//
++
++
++
+ 
+-//    //메모찾기함수 (-1 이면 해당메모 없음)
++    //    //메모찾기함수 (-1 이면 해당메모 없음)
+ //    int searchMemo(String searchText) {
+ //        int searchMemoIndex = memoList.indexOf(searchText);
+ //        if (searchMemoIndex <= -1) {
+@@ -26,7 +65,9 @@
+ //
+ //    }
+     void showMemo() {
+-
++        for (Memo memo : memoList) {
++            System.out.println(memo.getNumber() + ", " + memo.getWriter() + ", " + memo.getDate() + ", " + memo.getContents());
++        }
+ 
+ 
+     }//메모출력함수(리스트 보여주기)
+@@ -69,7 +110,6 @@
+ }
+ 
+ 
+-
+ //여러건의 메모 저장.
+ // 메모조회(Getter / Setter 존재)
+ // 작성최신순으로 메모 출력
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="(조운) 1차 합본입니다. &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제">
++    <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="(조운) 2차 합본입니다.&#10;* 수정사항 : main의 ~Question() 함수에 인자 memolist 들어가게 수정함 &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제">
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/Memo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Memo.java" afterDir="false" />
+@@ -86,7 +88,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1669164633615</updated>
+-      <workItem from="1669164637434" duration="33210000" />
++      <workItem from="1669164637434" duration="37090000" />
+     </task>
+     <task id="LOCAL-00001" summary="두번째 커밋.&#10;내용 업데이트가 안되있어서 베이스 다시 커밋합니다!">
+       <created>1669169991851</created>
+@@ -123,7 +125,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669197437530</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="(조운) 2차 합본입니다.&#10;* 수정사항 : main의 ~Question() 함수에 인자 memolist 들어가게 수정함 &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제">
++      <created>1669201684105</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1669201684105</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -146,6 +155,7 @@
+     <MESSAGE value="Memo 클래스에&#10;- 생성자, get구성요소 메소드들 만들었습니다.&#10;(조운)" />
+     <MESSAGE value="(조운)&#10;MemoList에 &#10;- searchMemo(String searchText){}&#10;메소드에서 인덱스를 찾고, 뱉어내는 식은 짰는데,&#10;(잘되나 구동테스트 + 일치하지 않는경우 어떻게 처리할지_일단오류텍스트가 뜨긴 합니다) 가 필요합니다. &#10;&#10;Memo 클래스에&#10;- 생성자, getter 메소드들 만들었습니다. &#10;&#10;Main 클래스&#10;- 대화창(프론트)? 만들었습니다." />
+     <MESSAGE value="(조운) 1차 합본입니다. &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제" />
+-    <option name="LAST_COMMIT_MESSAGE" value="(조운) 1차 합본입니다. &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제" />
++    <MESSAGE value="(조운) 2차 합본입니다.&#10;* 수정사항 : main의 ~Question() 함수에 인자 memolist 들어가게 수정함 &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제" />
++    <option name="LAST_COMMIT_MESSAGE" value="(조운) 2차 합본입니다.&#10;* 수정사항 : main의 ~Question() 함수에 인자 memolist 들어가게 수정함 &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제" />
+   </component>
+ </project>
+\ No newline at end of file

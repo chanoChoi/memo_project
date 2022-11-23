@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
     ArrayList<Memo> memoList = new ArrayList<>(); // 메모리스트 입니다.
+    int maxID = 1;
 
     // MemoList의 생성자
     MemoList() {
@@ -14,7 +15,6 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
         memo.index = memoList.size()+1; // 문제점 : memolist에서 메모 삭제하면, number가 안맞게된다. >> 해결책 : 어레이 리스트 자체의 인덱스를 쓸수 있나?
         memoList.add(memo);
     }
-
 
     //메모를 메모리스트에 입력하는 함수
     void inputMemo() {
@@ -43,16 +43,9 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
         System.out.println("내용 :" + memo.contents);
         System.out.println("------------------------");
 
+        memo.index = maxID;
         memoList.add(memo);
-
-//            memoList.inputMemo(memo);
-////        firstQuestion(); >> 여기는 for문으로 바꿔야 함. 무한반복 안돼
-//
-
-
-//    memo.index =memoList.size()+1; // 문제점 : memolist에서 메모 삭제하면, number가 안맞게된다. >> 해결책 : 어레이 리스트 자체의 인덱스를 쓸수 있나?
-//        memoList.add(memo);
-
+        maxID += 1;
     }
     void showMemo() {
         for (Memo memo : memoList) {
