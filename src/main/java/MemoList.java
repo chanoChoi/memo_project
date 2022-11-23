@@ -62,7 +62,14 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
 
     }//메모출력함수(리스트 보여주기)
 
-    void updateMemo() {
+    Memo findMemoByindex(int targetNo) {
+        if (targetNo < 1 || this.memoList.size() < targetNo) {
+            System.out.println("없다");
+            return null;
+        } else {
+            return this.memoList.get(targetNo);
+        }
+
     } // 메모수정함수
 
     void deleteMemo() {
