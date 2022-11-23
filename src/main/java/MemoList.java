@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
     ArrayList<Memo> memoList = new ArrayList<>(); // 메모리스트 입니다.
-    int maxID = 1;
+//    int maxID = 1; ※ 인덱스 넘버 넣는거 포기하고, memoList.size()+1로 돌렸는데, 담에 다시해보기.
 
     // MemoList의 생성자
     MemoList() {
@@ -43,20 +43,19 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
         System.out.println("내용 :" + memo.contents);
         System.out.println("------------------------");
 
-        memo.index = maxID;
+        memo.index = memoList.size() +1;
         memoList.add(memo);
-        maxID += 1;
+//        maxID += 1; // 포기했는데, 담에 다시해보자...
     }
     void showMemo() {
         for (Memo memo : memoList) {
             System.out.println(memo.getNumber() + ", " + memo.getWriter() + ", " + memo.getDate() + ", " + memo.getContents());
         }
 
-
     }//메모출력함수(리스트 보여주기)
 
     Memo findMemoByindex(int targetNo) {
-        if (targetNo < 1 || this.memoList.size() < targetNo) {
+        if (targetNo < 0 || this.memoList.size() <= targetNo) {
             System.out.println("없다");
             return null;
         } else {
@@ -78,7 +77,7 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
 //            matchPasswordassword = memoList.get(listIndex).password; //우리가 지우고자하는 메모의 패스워드값임.
 
             //첫if : 메모리스트의 크기보다 큰 숫자를 입력하면 오류메세지
-            if (listIndex > memoList.size()) {
+            if (listIndex >= memoList.size() || listIndex<0) {
                 System.out.println("해당 리스트는 없습니다. 다시 입력해 주세요.");
             } else { // 메모리스트 크기 안의 숫자를 넣은경우 :
                 do {
@@ -96,6 +95,7 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
                             return;
                         }
                     } else {
+                        System.out.println("삭제됐습니다!");
                         memoList.remove(listIndex); // 패스워드 값이 같으면 삭제
                     }
                 } while (!Objects.equals(password, matchPasswordassword));

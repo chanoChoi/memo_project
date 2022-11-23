@@ -41,9 +41,6 @@ public class Main {// 일종의 프론트
         }//while의 끝
     }//firstQuestion()끝
 
-
-
-
     // 2. 메모장 열기 의 대화창
     public static void memoListQuestion(MemoList memoList) {
 
@@ -58,29 +55,26 @@ public class Main {// 일종의 프론트
 
             switch (memoListAnswer) {
                 case 1:
-                    System.out.println("showMemo() 동작확인합니다!");
                     memoList.showMemo();
                     break;
                 case 2:
-                    System.out.println("삭제 요청할 메모 번호 입력해라");
-                    int targetIdx = memoListScanner.nextInt();
+                    System.out.println("수정 요청할 메모의 index 번호를 입력하세요.");
+                    int targetIdx = memoListScanner.nextInt()-1;
                     memoListScanner.nextLine();
                     Memo memo = memoList.findMemoByindex(targetIdx);
                     if (memo != null) {
                         System.out.println("비밀번호 확인");
                         String tryPassword = memoListScanner.nextLine();
                         if (!memo.matches(tryPassword)) {
-                            System.out.println(" ㅋㅋㅋㅋ 틀림");
+                            System.out.println("비밀번호가 틀렸습니다!");
                         } else {
-                            System.out.println("수정 내용 적어");
+                            System.out.println("수정할 내용을 적어주세요!");
                             String updatedContent = memoListScanner.nextLine();
                             memo.setContents(updatedContent);
                         }
                     }
-                    System.out.println("updateMemo()는 아직 없어요");
                     break;
                 case 3:
-                    System.out.println("deleteMemo() 동작 확인합니다!");
                     memoList.deleteMemo();
                     break;
                 case 4:
