@@ -62,7 +62,21 @@ public class Main {// 일종의 프론트
                     memoList.showMemo();
                     break;
                 case 2:
-                    memoList.updateMemo();
+                    System.out.println("삭제 요청할 메모 번호 입력해라");
+                    int targetIdx = memoListScanner.nextInt();
+                    memoListScanner.nextLine();
+                    Memo memo = memoList.findMemoByindex(targetIdx);
+                    if (memo != null) {
+                        System.out.println("비밀번호 확인");
+                        String tryPassword = memoListScanner.nextLine();
+                        if (!memo.matches(tryPassword)) {
+                            System.out.println(" ㅋㅋㅋㅋ 틀림");
+                        } else {
+                            System.out.println("수정 내용 적어");
+                            String updatedContent = memoListScanner.nextLine();
+                            memo.setContents(updatedContent);
+                        }
+                    }
                     System.out.println("updateMemo()는 아직 없어요");
                     break;
                 case 3:
