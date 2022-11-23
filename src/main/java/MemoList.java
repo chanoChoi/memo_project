@@ -15,18 +15,49 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
         memoList.add(memo);
     }
 
-    //    //메모찾기함수 (-1 이면 해당메모 없음)
-//    int searchMemo(String searchText) {
-//        int searchMemoIndex = memoList.indexOf(searchText);
-//        if (searchMemoIndex <= -1) {
-//            System.out.println("그런 메모는 없습니다!");
-//            // 다시 선택 화면으로 돌아가게?
-//        }
-//        return searchMemoIndex; // q번호를 보내야하는데..? 과연..?
-//
-//    }
-    void showMemo() {
 
+    //메모를 메모리스트에 입력하는 함수
+    void inputMemo() {
+        System.out.println("메모를 입력합니다.");
+        System.out.println("남기고 싶은 내용을 입력해주세요.");
+        Scanner memoContentScanner = new Scanner(System.in);
+        String memoContentAnswer = memoContentScanner.nextLine();
+        //memoContentAnswer 받은 내용을 memo.contents로 넣습니다.
+
+        System.out.println("작성자명을 입력해주세요.");
+        Scanner memoWriterScanner = new Scanner(System.in);
+        String memoWriterAnswer = memoWriterScanner.nextLine();
+        //memoWriterAnswer 받은 내용을 memo.writer로 넣습니다.
+
+        System.out.println("비밀번호를 입력해주세요.");
+        Scanner memoPasswordScanner = new Scanner(System.in);
+        String memoPasswordAnswer = memoPasswordScanner.nextLine();
+        //memoPasswordAnswer 받은 내용을 memo.password 로 넣습니다.
+
+        Memo memo = new Memo(memoWriterAnswer, memoPasswordAnswer, memoContentAnswer); // Memo 객체 생성
+        System.out.println("메모 입력이 완로되었습니다.");
+
+        System.out.println("------------------------");
+        System.out.println("작성자 :" + memo.writer);
+        System.out.println("작성일시 :" + memo.date);
+        System.out.println("내용 :" + memo.contents);
+        System.out.println("------------------------");
+
+        memoList.add(memo);
+
+//            memoList.inputMemo(memo);
+////        firstQuestion(); >> 여기는 for문으로 바꿔야 함. 무한반복 안돼
+//
+
+
+//    memo.index =memoList.size()+1; // 문제점 : memolist에서 메모 삭제하면, number가 안맞게된다. >> 해결책 : 어레이 리스트 자체의 인덱스를 쓸수 있나?
+//        memoList.add(memo);
+
+    }
+    void showMemo() {
+        for (Memo memo : memoList) {
+            System.out.println(memo.getNumber() + ", " + memo.getWriter() + ", " + memo.getDate() + ", " + memo.getContents());
+        }
 
 
     }//메모출력함수(리스트 보여주기)
@@ -34,7 +65,6 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
     void updateMemo() {
     } // 메모수정함수
 
-    //메모삭제함수
     void deleteMemo() {
         int listIndex; // deleteMemo()함수에서 사용하는 지역변수(스캔으로받는값)
         String password; // deleteMemo()함수에서 사용하는 지역변수(스캔으로받는값)
