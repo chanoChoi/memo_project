@@ -5,6 +5,12 @@ public class Memo {
     String date; //메모작성일(시스템날짜)
     String contents; //메모내용
 
+    Memo(String writer, String password, String contents) {
+        this.writer = writer;
+        this.password = password;
+        this.contents = contents;
+    }
+
 
     //메모리스트가 찾아낸 특정 메모를 삭제메소드, 수정 메소드
     //메모 한건의 정보 갖고있음.
