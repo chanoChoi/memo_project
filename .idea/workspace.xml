@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="(조운) 1차 합본입니다. &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제">
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Memo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Memo.java" afterDir="false" />
+=======
+    <list default="true" id="9c88d304-6f9a-497c-93b2-6dedc672c935" name="Changes" comment="(조운) 3차 합본입니다.&#10; &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 67d3f0b34bdb5ebdf7a4802b22ef103e8cedbb0d
       <change beforePath="$PROJECT_DIR$/src/main/java/MemoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MemoList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +75,14 @@
       <updated>1669164633615</updated>
       <workItem from="1669164637434" duration="5110000" />
     </task>
+    <task id="LOCAL-00001" summary="(조운) 3차 합본입니다.&#10; &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제">
+      <created>1669206853238</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669206853238</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +99,7 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -96,5 +111,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+=======
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="(조운) 3차 합본입니다.&#10; &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제" />
+    <option name="LAST_COMMIT_MESSAGE" value="(조운) 3차 합본입니다.&#10; &#10;&#10;&lt; MemoList 클래스&gt;&#10;- 필드 :&#10;- 메소드 :&#10;(코드짠거)&#10;-inputMemo()&#10;-deleteMemo() &#10;(코드아직)&#10;-showMemo()&#10;-updateMemo()&#10;&#10;&lt; Memo 클래스 &gt;&#10;- 필드 : &#10;    int index; // 메모글번호&#10;    String writer; //메모작성자명&#10;    String password; //메모비번&#10;    String date; //메모작성일(시스템날짜)&#10;    String contents; //메모내용&#10;    &#10;- 메소드&#10;생성자, getter 메소드 &#10;&#10;&lt; Main 클래스 &gt;&#10;- 일종의 프론트 역할을 합니다.&#10;- 필드 : 따로없음 &#10;- 메소드&#10;fristQuestion() : &#10;inputQuestion() : 메모작성&#10;memoListQuestion() : 메모보기, 수정, 삭제" />
+>>>>>>> 67d3f0b34bdb5ebdf7a4802b22ef103e8cedbb0d
   </component>
 </project>
