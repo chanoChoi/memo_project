@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
@@ -24,9 +25,7 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
 //        return searchMemoIndex; // q번호를 보내야하는데..? 과연..?
 //
 //    }
-
     void showMemo() {
-
 
 
 
@@ -56,7 +55,7 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
                     Scanner scanPw = new Scanner(System.in);
                     password = scanPw.nextLine(); // 비밀번호 scanner로 입력받음
 
-                    if (password == matchPassword) { // 입력받은 비밀번호가 해당 index메모의 비밀번호인지 확인.
+                    if (Objects.equals(password, matchPassword)) { // 입력받은 비밀번호가 해당 index메모의 비밀번호인지 확인.
                         memoList.remove(listIndex); // 맞으면, 메모 삭제함.
                     } else {
                         System.out.println("패스워드를 재확인 해주세요.");

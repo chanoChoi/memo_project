@@ -15,7 +15,7 @@ public class Memo {
         this.password =password;
         this.contents = contents;
 
-        //생성자에서 받지 않는 인자(number,date)
+        //생성자에서 받지 않는 인자(index,date)
         LocalDateTime time = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yy/MM/dd HH:mm");
         this.date = time.format(formatter);
@@ -23,6 +23,11 @@ public class Memo {
         this.index = 0; // 리스트에서 n번째여야함. >> 얘를 메모리스트에서 넣어줄 수 있나..?
 
     } // 생성자 끝
+
+    void toString(){
+
+    }
+
     // Memo 객체의 내용값을 뱉어주는 함수들
     public int getNumber(){
         return this.index;
