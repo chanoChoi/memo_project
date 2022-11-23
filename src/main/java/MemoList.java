@@ -77,7 +77,7 @@ public class MemoList { // 메모 넣고, 메모 찾고, 수정삭제하고...
 //            matchPasswordassword = memoList.get(listIndex).password; //우리가 지우고자하는 메모의 패스워드값임.
 
             //첫if : 메모리스트의 크기보다 큰 숫자를 입력하면 오류메세지
-            if (listIndex >= memoList.size() || listIndex<0) {
+            if (listIndex > memoList.size() || listIndex<0) {
                 System.out.println("해당 리스트는 없습니다. 다시 입력해 주세요.");
             } else { // 메모리스트 크기 안의 숫자를 넣은경우 :
                 do {
